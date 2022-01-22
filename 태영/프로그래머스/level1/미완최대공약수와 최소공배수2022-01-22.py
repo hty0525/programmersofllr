@@ -22,14 +22,18 @@ n	m	return
 def solution(n, m):
     answer = []
     num = 0
-    a = n % m
-    if n > m:
-        a = n % m
-        print(a)
+    if n >= m:
+        if n % m == 0:
+            answer.append(m)
+        else:
+            answer.append(n*m)
     else:
-        a = m % n
-        print(a)
+        if n % m == 0:
+            answer.append(n)
+        else:
+            answer.append(n*m)
+
     return answer
 
 
-solution(3, 12)
+print(solution(3, 12))
